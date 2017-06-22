@@ -2921,6 +2921,12 @@ table {
   padding-top: 90px;
   background-color: #FCFCFC;
   text-align: center; }
+  .portfolio-foto-wrapper-view {
+    -webkit-transition: -webkit-transform 1s;
+    transition: -webkit-transform 1s;
+    -o-transition: transform 1s;
+    transition: transform 1s;
+    transition: transform 1s, -webkit-transform 1s; }
   .portfolio__title {
     font-family: 'HerrVonMuellerhoff-Regular';
     color: rgba(48, 48, 48, 0.6);

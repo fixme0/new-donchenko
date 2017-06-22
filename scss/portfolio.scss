@@ -2,6 +2,9 @@
     padding-top: 90px;
     background-color: #FCFCFC;
     text-align: center;
+    &-foto-wrapper-view {
+        transition: transform 1s;
+    }
     &__title {
         font-family: 'HerrVonMuellerhoff-Regular';
         color:  rgba(48, 48, 48, 0.6);

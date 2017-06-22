@@ -4,7 +4,7 @@ $(document).ready(function() {
         arrows: false,
         slide: ('.header-slider-item'),
         appendDots: ('.header-slider-dots'),
-        autoplay:true,
+//        autoplay:true,
         autoplaySpeed: 4000,
         pauseOnHover:false
     });

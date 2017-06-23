@@ -31,7 +31,9 @@ $(document).ready(function() {
         }
         showGallery() {
             $('body, html').css('overflow', 'hidden');
-            $('.gallery-show').fadeIn(300);
+            $('.gallery-show').fadeIn(300, function() {
+                $(this).css('display', 'flex');
+            });
             this.bindEvents();
             this.showPhoto(); 
         }

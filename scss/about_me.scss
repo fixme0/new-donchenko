@@ -32,10 +32,6 @@
         @extend .section-title
     }
     &__descr {
-        margin-top: 60px;
-        font-family: 'Raleway-Medium';
-        color:  #515151;
-        font-size: 14px;
-        line-height: 2;
+        @extend .section-descr
     }
 }

@@ -260,44 +260,8 @@
                 }
             }
             &-btn {
-                display: inline-block;
-                background-color:  #303030;
-                width: 145px;
-                padding: 12.5px 0;
-                font-family: 'Raleway-SemiBold';
-                letter-spacing: 1px;
-                color:  #ffffff;
-                font-size: 12px;
-                text-transform: uppercase;
-                border: 1px solid #fff;
-                overflow: hidden;
+                @extend .section-btn;
                 visibility: hidden;
-                &:hover,
-                &:focus,
-                &:active{
-                    text-decoration: none;
-                    color: #fff;
-                }
-                & span {
-                    position: relative;
-                    line-height: 1;
-                    z-index: 0;
-                    display: block;
-                    transition: transform .3s;
-                    font-family: 'Raleway-SemiBold';
-                    letter-spacing: 1px;
-                    font-size: 12px;
-                    &:before {
-                        color: #E1571A;
-                        position: absolute;
-                        top: 200%;
-                        content: attr(data-hover);
-                        transform: translate3d(0, 0, 0);
-                    }
-                }
-                &:hover span {
-                    transform: translateY(-200%);
-                }
             }
         }
     }

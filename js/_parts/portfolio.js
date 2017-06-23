@@ -17,6 +17,6 @@ $(document).ready(function() {
         
         $(currentActiveElem).removeClass('active');
         $(this).addClass('active');
-        viewPortPortfolio.css('transform', `translateY(-${heightList*indexHeight}px)`);
+        viewPortPortfolio.css('transform', `translateY(-${heightList*indexHeight+0.5}px)`);
     });
 });

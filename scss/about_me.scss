@@ -29,7 +29,8 @@
     }
     &__title {
         margin-top: 60px;
-        @extend .section-title
+        @extend .section-title;
+        font-size: 20px;
     }
     &__descr {
         @extend .section-descr

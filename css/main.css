@@ -78,12 +78,12 @@ table {
   src: url("../fonts/PlayfairDisplay-Italic.woff") format("woff"), url("../fonts/PlayfairDisplay-Italic.ttf") format("truetype"), url("../fonts/PlayfairDisplay-Italic.eot?#iefix") format("embedded-opentype");
   font-weight: normal;
   font-style: normal; }
-.section-title, .about-me__title, .services__title {
+.section-title, .about-me__title, .services__title, .certificate__title, .insta__title {
   font-family: 'PlayfairDisplay-Italic';
   color: rgba(48, 48, 48, 0.6);
   font-size: 30px;
   position: relative; }
-  .section-title span, .about-me__title span, .services__title span {
+  .section-title span, .about-me__title span, .services__title span, .certificate__title span, .insta__title span {
     -webkit-border-radius: 50%;
             border-radius: 50%;
     background-color: #e8e8e8;
@@ -96,7 +96,7 @@ table {
     -webkit-transform: translateX(-50%);
         -ms-transform: translateX(-50%);
             transform: translateX(-50%); }
-    .section-title span:before, .about-me__title span:before, .services__title span:before, .section-title span:after, .about-me__title span:after, .services__title span:after {
+    .section-title span:before, .about-me__title span:before, .services__title span:before, .certificate__title span:before, .insta__title span:before, .section-title span:after, .about-me__title span:after, .services__title span:after, .certificate__title span:after, .insta__title span:after {
       content: '';
       background-color: #e8e8e8;
       width: 23px;
@@ -106,21 +106,21 @@ table {
       -webkit-transform: translateY(-50%);
           -ms-transform: translateY(-50%);
               transform: translateY(-50%); }
-    .section-title span:before, .about-me__title span:before, .services__title span:before {
+    .section-title span:before, .about-me__title span:before, .services__title span:before, .certificate__title span:before, .insta__title span:before {
       right: -webkit-calc(100% + 10px);
       right: calc(100% + 10px); }
-    .section-title span:after, .about-me__title span:after, .services__title span:after {
+    .section-title span:after, .about-me__title span:after, .services__title span:after, .certificate__title span:after, .insta__title span:after {
       left: -webkit-calc(100% + 10px);
       left: calc(100% + 10px); }
 
-.section-descr, .about-me__descr, .services__descr {
+.section-descr, .about-me__descr, .services__descr, .certificate-content-descr {
   margin-top: 60px;
   font-family: 'Raleway-Medium';
   color: #515151;
   font-size: 14px;
   line-height: 2; }
 
-.section-btn, .header-slider-item__info-btn, .services-list__link {
+.section-btn, .header-slider-item__info-btn, .services-list__link, .certificate__btn {
   display: inline-block;
   background-color: #303030;
   width: 145px;
@@ -132,10 +132,10 @@ table {
   text-transform: uppercase;
   border: 1px solid #fff;
   overflow: hidden; }
-  .section-btn:hover, .header-slider-item__info-btn:hover, .services-list__link:hover, .section-btn:focus, .header-slider-item__info-btn:focus, .services-list__link:focus, .section-btn:active, .header-slider-item__info-btn:active, .services-list__link:active {
+  .section-btn:hover, .header-slider-item__info-btn:hover, .services-list__link:hover, .certificate__btn:hover, .section-btn:focus, .header-slider-item__info-btn:focus, .services-list__link:focus, .certificate__btn:focus, .section-btn:active, .header-slider-item__info-btn:active, .services-list__link:active, .certificate__btn:active {
     text-decoration: none;
     color: #fff; }
-  .section-btn span, .header-slider-item__info-btn span, .services-list__link span {
+  .section-btn span, .header-slider-item__info-btn span, .services-list__link span, .certificate__btn span {
     position: relative;
     line-height: 1;
     z-index: 0;
@@ -148,14 +148,14 @@ table {
     font-family: 'Raleway-SemiBold';
     letter-spacing: 1px;
     font-size: 12px; }
-    .section-btn span:before, .header-slider-item__info-btn span:before, .services-list__link span:before {
+    .section-btn span:before, .header-slider-item__info-btn span:before, .services-list__link span:before, .certificate__btn span:before {
       color: #E1571A;
       position: absolute;
       top: 205%;
       content: attr(data-hover);
       -webkit-transform: translate3d(0, 0, 0);
               transform: translate3d(0, 0, 0); }
-  .section-btn:hover span, .header-slider-item__info-btn:hover span, .services-list__link:hover span {
+  .section-btn:hover span, .header-slider-item__info-btn:hover span, .services-list__link:hover span, .certificate__btn:hover span {
     -webkit-transform: translateY(-205%);
         -ms-transform: translateY(-205%);
             transform: translateY(-205%); }
@@ -2787,14 +2787,14 @@ table {
         line-height: 1.1;
         margin-bottom: 40px;
         visibility: hidden;
-        -webkit-animation-duration: .5s;
-                animation-duration: .5s;
-        -webkit-animation-timing-function: linear;
-                animation-timing-function: linear;
+        -webkit-animation-duration: .6s;
+                animation-duration: .6s;
+        -webkit-animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+                animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
         -webkit-animation-fill-mode: forwards;
                 animation-fill-mode: forwards;
-        -webkit-animation-delay: .5s;
-                animation-delay: .5s; }
+        -webkit-animation-delay: .7s;
+                animation-delay: .7s; }
         .animated .header-slider-item__info-text {
           -webkit-animation-name: my-custom-slideInDown;
                   animation-name: my-custom-slideInDown; }
@@ -2839,10 +2839,10 @@ table {
 .my-custom-slideInUp {
   -webkit-animation-name: my-custom-slideInUp;
           animation-name: my-custom-slideInUp;
-  -webkit-animation-duration: .4s;
-          animation-duration: .4s;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
+  -webkit-animation-duration: .6s;
+          animation-duration: .6s;
+  -webkit-animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+          animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both;
   -webkit-animation-delay: 1s;
@@ -2918,7 +2918,8 @@ table {
       -webkit-transform: rotateY(180deg) translateX(50%);
               transform: rotateY(180deg) translateX(50%); }
   .about-me__title {
-    margin-top: 60px; }
+    margin-top: 60px;
+    font-size: 20px; }
 
 .portfolio {
   padding-top: 90px;
@@ -3056,9 +3057,9 @@ table {
         transition: transform .2s linear;
         transition: transform .2s linear, -webkit-transform .2s linear; }
       .portfolio-foto-list-item:hover img {
-        -webkit-transform: scale(1.1);
-            -ms-transform: scale(1.1);
-                transform: scale(1.1); }
+        -webkit-transform: scale(1.1) rotate(-2deg);
+            -ms-transform: scale(1.1) rotate(-2deg);
+                transform: scale(1.1) rotate(-2deg); }
       .portfolio-foto-list-item:before, .portfolio-foto-list-item:after {
         content: '';
         position: absolute;
@@ -3160,6 +3161,10 @@ table {
 .services {
   padding-top: 90px;
   text-align: center; }
+  .services__descr--dop {
+    display: block;
+    margin: 20px 0;
+    line-height: 1; }
   .services-list {
     padding: 15px 0;
     border-bottom: 2px solid #ccc;
@@ -3221,6 +3226,10 @@ table {
         padding-right: 10px;
         margin-right: 10px;
         border-right: 1px solid #000; }
+    .services-list__link:hover span {
+      -webkit-transform: translateY(-216%);
+          -ms-transform: translateY(-216%);
+              transform: translateY(-216%); }
     .services-list:hover {
       border-color: transparent;
       -webkit-transform: scale(1.03);
@@ -3232,3 +3241,103 @@ table {
       -webkit-transform: scale(1);
           -ms-transform: scale(1);
               transform: scale(1); }
+
+.certificate {
+  padding-top: 90px;
+  text-align: center; }
+  .certificate__title {
+    text-transform: capitalize; }
+  .certificate-content {
+    margin-top: 60px; }
+    .certificate-content-descr {
+      margin-top: 0;
+      text-align: left; }
+      .certificate-content-descr--dop {
+        display: block;
+        margin: 20px 0; }
+    .certificate-content-img img {
+      width: 93%; }
+  .certificate__btn {
+    display: block;
+    margin-top: 25px; }
+
+.insta__title {
+  padding-top: 60px;
+  text-align: center; }
+.insta-view {
+  margin-top: 60px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap; }
+  .insta-view__item {
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    height: 400px;
+    -webkit-transition: flex-grow .2s, -webkit-box-flex .2s, -webkit-flex-grow .2s;
+    transition: flex-grow .2s, -webkit-box-flex .2s, -webkit-flex-grow .2s;
+    -o-transition: flex-grow .2s;
+    transition: flex-grow .2s;
+    transition: flex-grow .2s, -webkit-box-flex .2s, -webkit-flex-grow .2s, -ms-flex-positive .2s;
+    position: relative;
+    overflow: hidden; }
+    .insta-view__item-name, .insta-view__item .fa-instagram {
+      position: absolute;
+      -webkit-transform: translate(-50%, -50%);
+          -ms-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%);
+      color: #fff;
+      -webkit-transition: left 0.6s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+      -o-transition: left 0.6s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+      transition: left 0.6s cubic-bezier(0.445, 0.05, 0.55, 0.95); }
+    .insta-view__item-name {
+      font-size: 16px;
+      top: 60%;
+      left: 50%;
+      font-family: 'Raleway-Medium';
+      opacity: 0;
+      -webkit-transition: opacity .5s .65s;
+      -o-transition: opacity .5s .65s;
+      transition: opacity .5s .65s;
+      will-change: transform; }
+    .insta-view__item .fa-instagram {
+      font-size: 50px;
+      top: 50%;
+      left: -50%; }
+    .insta-view__item:before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.6);
+      opacity: 0;
+      -webkit-transition: opacity .6s;
+      -o-transition: opacity .6s;
+      transition: opacity .6s; }
+    .insta-view__item:hover {
+      -webkit-box-flex: 2;
+      -webkit-flex-grow: 2;
+          -ms-flex-positive: 2;
+              flex-grow: 2; }
+      .insta-view__item:hover:before {
+        opacity: 1; }
+      .insta-view__item:hover .fa-instagram {
+        left: 50%; }
+      .insta-view__item:hover .insta-view__item-name {
+        opacity: 1; }
+    .insta-view__item li {
+      height: 100%;
+      width: 100%; }

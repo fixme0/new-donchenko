@@ -66,9 +66,9 @@ $(document).ready(function() {
             });
             $('.gallery-show, .gallery-show .fa-times, .gallery-show-arrows .fa-arrow-left, .gallery-show-arrows .fa-arrow-right').unbind('click');
         }
-        listingPhoto(event) {
-            event.stopPropagation();
-            if($(this).is('.fa-arrow-left')) {
+        listingPhoto(element) {
+            
+            if($(elemnt).is('.fa-arrow-left')) {
                 if(_thatGallery.currentElem.prev().length) {
                    _thatGallery.currentElem = _thatGallery.currentElem.prev();
                 }else {
@@ -85,8 +85,12 @@ $(document).ready(function() {
             _thatGallery.showPhoto();
         }
         bindEvents() {
+            let self = this;
             $('.gallery-show, .gallery-show .fa-times').bind('click', this.closeGallery);
-            $('.gallery-show-arrows .fa-arrow-left, .gallery-show-arrows .fa-arrow-right').bind('click', this.listingPhoto);
+            $('.gallery-show-arrows .fa-arrow-left, .gallery-show-arrows .fa-arrow-right').bind('click', function(e){
+                e.stopPropagation();
+                this.listingPhoto.call(self, this);
+            });
             _thatGallery = this;
         }
     }
@@ -127,6 +131,34 @@ $(document).ready(function() {
             .addClass('my-custom-slideInUp');
     });
 });
+(function($) {
+    var tok = '3707999646.b053add.81b32ed685d14350b794e31b4b35c73c',
+    userid = 3707999646, 
+    col = 5;
+ 
+    $.ajax({
+        url: 'https://api.instagram.com/v1/users/' + userid + '/media/recent',
+        dataType: 'jsonp',
+        type: 'GET',
+        data: {access_token: tok, count: col}, // передаем параметры, которые мы указывали выше
+        success: function(result){
+            var data = result.data,
+                instaView = $('.insta-view');
+           
+            data.map(function(elem) {
+                 console.log(elem);
+                instaView.append(`
+                <a href="${elem.link}" target="_blanc" class="insta-view__item">
+                    <li style="background:url('${elem.images.standard_resolution.url}'); background-repeat: no-repeat; background-size: cover; background-position: top center;">
+                    </li>
+                    <i class="fa fa-instagram" aria-hidden="true"></i>
+                    <span class="insta-view__item-name">Анна Донченко, Киев</span>
+                </a>
+                                `);
+            });
+        }
+    });
+}(jQuery));
 $(document).ready(function() {
     var menu = $('.top-nav');
     

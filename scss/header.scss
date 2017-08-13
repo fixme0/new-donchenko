@@ -251,10 +251,10 @@
                 line-height: 1.1;
                 margin-bottom: 40px;
                 visibility: hidden;
-                animation-duration: .5s;
-                animation-timing-function: linear;
+                animation-duration: .6s;
+                animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
                 animation-fill-mode: forwards;
-                animation-delay: .5s;
+                animation-delay: .7s;
                 .animated & {
                     animation-name: my-custom-slideInDown;
                 }
@@ -306,8 +306,8 @@
 
 .my-custom-slideInUp {
     animation-name: my-custom-slideInUp;
-    animation-duration: .4s;
-    animation-timing-function: linear;
+    animation-duration: .6s;
+    animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
     animation-fill-mode: both;
     animation-delay: 1s;   
 }

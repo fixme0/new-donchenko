@@ -5,7 +5,12 @@
         @extend .section-title
     }
     &__descr {
-        @extend .section-descr
+        @extend .section-descr;
+            &--dop {
+                display: block;
+                margin: 20px 0;
+                line-height: 1;
+            }
     }
     &-list {
         padding: 15px 0;
@@ -54,6 +59,9 @@
         }
         &__link {
             @extend .section-btn;
+            &:hover span {
+               transform: translateY(-216%);
+            }
         }
         &:hover {
             border-color: transparent;

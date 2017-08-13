@@ -1,0 +1,28 @@
+.certificate {
+    padding-top: 90px;
+    text-align: center;
+    &__title {
+        @extend .section-title;
+        text-transform: capitalize;
+    }
+    &-content {
+        margin-top: 60px;
+        &-descr {
+            @extend .section-descr;
+            margin-top: 0;
+            text-align: left;
+            &--dop {
+                display: block;
+                margin: 20px 0;
+            }
+        }
+        &-img img {
+            width: 93%;
+        }
+    }
+    &__btn {
+        @extend .section-btn;
+        display: block;
+        margin-top: 25px;
+    }
+}
